@@ -3,15 +3,14 @@
 //Variable to store user's choice
 var userChoice= "";
 
-//Variables for number of correct answers, total number of answers, 
-var correct = 0;
+//Variables for number of correct answers, total number of answers
+var score = 0;
 var total= 5;
 var value = false;
 
 //How many seconds the user will have to complete the quiz
 var count = 180;
 
-//Stores timer 
 var timer;
 
 
@@ -30,27 +29,27 @@ $(document).ready(function() {
 		function decrement () {
 		count--;
 
-			//Converts miliseconds into minutes and seconds
+			//Converts miliseconds into minutes and seconds for the timer to display
 			var converted = timeConverter(count);
 			$("#timer").html("Time Remaining: " + converted);
 
-			//Once timer reaches 0, stop the timer
+			// when the timer reaches zero, stop the timer
 			if (count === 0) {
 				stop();
-				//Displays score when timer reaches 0
+				// display the user's score when the timer stops
 				$("#score").html("Score: " + total);
 				console.log(score);
 			}
 		}
 
-		//Creates function to stop timer
+		//function that stops the timer
 		function stop () {
 			clearInterval(timer)
 		}
 
 		run();
 
-	//Converts seconds into minutes
+	//converting seconds into minutes
 	function timeConverter(t) {
 
 		var minutes = Math.floor(t / 60);
@@ -70,29 +69,26 @@ $(document).ready(function() {
 		return minutes + ":" + seconds;
 	}
 
-//
+
 	$("input").on("click", function() {
 		value = ($(this).val())
 		console.log(value);
 
+		// if the user's guess is correct (true value) their score of correct answers increases
 		if (value == "true") {
-			correct ++;
-			console.log(correct);
+			score ++;
+			console.log(score);
 		}
 
 //Creates function when submit button is clicked
 $("#submit").on("click", function () {
 	
 //Displays correct answers out of total questions
-	$("#score").html("Score: " + correct + "/" + total);
+	$("#score").html("Score: " + score + "/" + total);
 	
 	//Stops timer
 	stop ();
-	// $("#restart").html("<button>Play Again</button>");
 
-	// $("#restart").on("click", function reset() {
-
-	// });
 
 	});	
 
