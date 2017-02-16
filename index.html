@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Trivia Game</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+	<meta charset="UTF-8">
+	<title>Artist Trivia Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="assets/javascript/app.js"></script>
+
 </head>
 <body>
 
+	<div class="container">
+		<h1>Name the Painter</h1>
+		<button id="start">Start</button><br><br>
+		<div id="timer"></div><br>
 
+		<div id="question_1">
+			<h2>Question 1</h2>
+			<p class="questions">Which famous artist cut off his left ear after a disagreement with a friend?</p>
+			<p class="answers">
+			<input type="radio" name= "questionOne" value="false">A. Klimt
+			<input type="radio" name= "questionOne" value="true"> B. Van Gogh 
+			<input type="radio" name= "questionOne" value="false">C. Picasso
+			<input type="radio" name= "questionOne" value="false">D. Mondrian</p>
+		</div><br>
+
+		<div id="question_2">
+			<h2>Question 2</h2>
+			<p class="questions">He painted The Creation of Man, a small fragment of the Sistine Chapel.</p>
+			<p class="answers">
+			<input type="radio" name= "questionTwo" value="false"> A. Caravaggio
+			<input type="radio" name= "questionTwo" value="false"> B. Da Vinci
+			<input type="radio" name= "questionTwo" value="false"> C. Raphael
+			<input type="radio" name= "questionTwo" value="true"> D. Michelangelo</p><br>
+
+		<div id="question_3">
+			<h2>Question 3</h2>
+			<p class="questions">After being injured in a street car accident, this artist painted mostly self portraits that depicted the suffering and pain of women.</p>
+			<p class="answers">
+			<input type="radio" name= "questionThree" value= "true">A. Kahlo
+			<input type="radio" name= "questionThree" value="false">B. O'Keefe</p>
+			<input type="radio" name= "questionThree" value="false">C. Magritte</p>
+			<input type="radio" name= "questionThree" value="false">D. Riveria</p><br>
+
+		<div id="question_4">
+			<h2>Question 4</h2>
+			<p class="questions">Born in Wisconsin, this artist is best known for large paintings of desert flowers and scenery.</p>
+			<p class="answers">
+			<input type="radio" name= "questionFour" value= "false">A. Monet 
+			<input type="radio" name= "questionFour" value= "false">B. Riveria 
+			<input type="radio" name= "questionFour" value= "true">C. O'Keefe
+			<input type="radio" name= "questionFour" value= "false">D. Mondrian</p><br>
+
+		<div id="question_5">
+			<h2>Question 5</h2>
+			<p class="questions">Which Spanish artist was the founder of the abstract movement in 20th-century, and painted such works as Guernica, painted as a representation of the bombing of Gernika in the Spanish Civil War?</p>
+			<p class="answers">
+			<input type="radio" name= "questionFive" value= "false">A. Dali
+			<input type="radio" name= "questionFive" value= "false">B. Klimt
+			<input type="radio" name= "questionFive" value= "false">C. Luca
+			<input type="radio" name= "questionFive" value = "true">D. Picasso</p><br>
+
+		<button id="submit">Submit</button><br><br>
+		<div id="score"></div><br>
+		<div id="restart"></div><br><br>
+	</div>
 
 </body>
 </html>

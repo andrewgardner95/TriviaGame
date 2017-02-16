@@ -1,0 +1,25 @@
+body {
+	text-align: center;
+	background-image: url(../images/);
+	margin: 0 auto;
+}
+
+.container {
+	background: #e7e7e7;
+	margin: 100px;
+	padding: 20px;
+	font-family: arial;
+
+}
+
+#timer, #score {
+	font-size: 32px;
+}
+
+h1, h2 {
+	color: blue;
+}
+
+button {
+	font-size: 18px;
+}
